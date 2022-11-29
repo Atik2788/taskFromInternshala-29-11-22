@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Download from './Download';
+import Table from './Pages/Table';
+import TableFour from './Pages/TableFour';
+import TableThree from './Pages/TableThree';
+import TableTwo from './Pages/TableTow';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='max-w-[1440px] mx-auto' id="pageToDownload">
+
+      <Table />
+      <TableTwo />
+      <TableThree />
+      <TableFour />
+      <div className='my-20 ml-24'>
+        <Download
+          roofElementId="pageToDownload"
+        // downloadFileName={name}
+        ></Download>
+      </div>
     </div>
   );
 }
